@@ -1,154 +1,1050 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Page Title</title>
-    <style>
-      *{margin:0; box-sizing:border-box;}
-      header {width:100%; height:192px; float:left;  border-bottom:3px solid red;}
-      #banner {width:100%; height:30px; float:left; background-color:gray; text-align:center;}
 
-      #top {width:100%; height:30px; float:left; background-color:#fff; border-bottom:1px solid #ddd;}
-      #top > .sbox {width:1250px; height:30px; margin:0 auto; background-color:gold;}
-      #top > .sbox > .site {width:100px; height:30px; margin:0 auto; float:left; background-color:red;}
-      #top > .sbox > .login {width:300px; height:30px; margin:0 auto; float:right;background-color:blue;}
+<head>
+  <title>Page Title</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "맑은고딕";
+    }
 
-      #box {width:100%; height:100px; float:left; background-color:#fff; border-bottom:1px solid #ddd;}
-      #box > .bbox {width:1250px; height:100px; margin:0 auto; background-color:pink; display:inline_block}
-      #box > .bbox > .logo {width:300px; height:100px; margin:0 auto; float:left; background-color:gold;}
-      #box > .bbox > .search {width:650px; height:100px; margin:0 auto; float:left; background-color:skyblue;}
-      #box > .bbox > .sbanner {width:300px; height:100px; margin:0 auto; float:left; background-color:pink;}
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      margin: 60px 0px 7px 0px;
+    }
+
+    p {
+      margin: 0px 0px 10px 0px;
+    }
+
+    header {
+      width: 100%;
+      height: 192px;
+      margin: 0 auto;
+      border-bottom: 3px solid red;
+    }
+
+    #banner {
+      width: 100%;
+      height: 30px;
+      float: left;
+      background-color: #32343e;
+      text-align: center;
+    }
+
+    #top {
+      width: 100%;
+      height: 30px;
+      float: left;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #top>.sbox {
+      width: 1250px;
+      height: 30px;
+      margin: 0 auto;
+      background-color: gold;
+    }
+
+    #top>.sbox>.site {
+      width: 160px;
+      height: 30px;
+      margin: 0 auto;
+      padding: 3px 0 2px 10px;
+      float: left;
+      background-color: red;
+      font-size: 10px;
+    }
+
+    #top>.sbox>.site>a:hover:not(.active) {
+      color: #aa0000;
+    }
+
+    #top>.sbox>.site>a {
+      color: #32343e;
+    }
 
 
-      #menu {width:100%; height:30px; float:left;}
-      #menu > ul {width:1250px; height:30px; margin:0 auto; background-color:cyan;}
+    #top>.sbox>.login {
+      width: 400px;
+      height: 30px;
+      margin: 0 auto;
+      float: right;
+      background-color: none;
 
-      #mainbanner {width:1250px; height:450px;  margin:0 auto; background-color:skyblue;}
-      #Lmenu {width:180px; height:450px; margin:0 auto; float:left; background-color:red;}
-      #Rbanner {width:1070px; height:450px; margin:0 auto; float:right; background-color:gray;}
+    }
 
-      #sub {width:1250px; height:450px;  margin:0 auto; background-color:skyblue;}
-      #Lbanner {width:180px; height:450px; margin:0 auto; float:left; background-color:gray;}
-      #product {width:1070px; height:450px; margin:0 auto; float:right; background-color:red;}
+    #box {
+      width: 100%;
+      height: 100px;
+      float: left;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
 
-      #section01 {width:1250px; height:1230px; margin:190px auto 0px; float:center; background-color:skyblue; border:0.25px solid #000;}
-      h1 {margin:60px 0px 7px 0px;}
-      p {margin:0px 0px 10px 0px;}
-      #section01 > #contaner01 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section01 > #contaner02 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section01 > #contaner03 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section01 > #contaner04 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section01 > #contaner05 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section01 > #contaner06 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section01 > #contaner07 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section01 > #contaner08 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section01 > #contaner09 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section01 > #contaner10 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
+    #box>.bbox {
+      width: 1250px;
+      height: 100px;
+      margin: 0 auto;
+      background-color: pink;
+      display: inline_block
+    }
 
-      #section02 {width:1250px; height:1230px; margin:0px auto; float:center; background-color:gray; border:0.25px solid #000;}
-      h1 {margin:60px 0px 7px 0px;}
-      p {margin:0px 0px 10px 0px;}
-      #section02 > #contaner2_01 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section02 > #contaner2_02 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section02 > #contaner2_03 {width:20%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
-      #section02 > #contaner2_04 {width:40%; height: 390px; background-color:pink; float: left; overflow: visible; border:0.25px solid #999;}
+    #box>.bbox>.logo {
+      width: 300px;
+      height: 100px;
+      margin: 0 auto;
+      float: left;
+      background-color: gold;
+    }
+
+    #box>.bbox>.search {
+      width: 650px;
+      height: 100px;
+      margin: 0 auto;
+      float: left;
+      background-color: skyblue;
+    }
+
+    #box>.bbox>.sbanner {
+      width: 300px;
+      height: 100px;
+      margin: 0 auto;
+      float: left;
+      background-color: pink;
+    }
 
 
+    #menu {
+      width: 100%;
+      height: 30px;
+      float: left;
+    }
 
-    </style>
-  </head>
-  <body>
+    #menu>ul {
+      width: 1250px;
+      height: 30px;
+      margin: 0 auto;
+      list-style-type: none;
+    }
 
-    <header>
-      <div id="banner">
-        <span id="textinbanner">상단 띠배너</span>
-      </div>
+    #menu>ul>li {
+      float: left;
+    }
 
-      <div id="top">
-        <div class="sbox">
-          <div class="site"></div>
-          <div class="login"></div>
+    #menu>ul>li>a {
+      display: block;
+      color: #666;
+      text-align: center;
+      padding: 5px 7px 5px 50px;
+      text-decoration: none;
+    }
+
+    #menu>ul>li a:hover:not(.active) {
+      color: #aa0000;
+    }
+
+
+    #mainbanner {
+      width: 1250px;
+      height: 450px;
+      margin: 0 auto;
+      float: center;
+      background-color: gray;
+      position: relative;
+    }
+
+    #sub {
+      width: 1250px;
+      height: 450px;
+      margin: 0 auto;
+      background-color: skyblue;
+    }
+
+    #Lbanner {
+      width: 180px;
+      height: 450px;
+
+      float: left;
+      background-color: gray;
+    }
+
+    #product {
+      width: 1070px;
+      height: 450px;
+      margin: 0 auto;
+      float: right;
+      background-color: red;
+    }
+
+    #section01 {
+      width: 1250px;
+      height: 925px;
+      margin: 0px auto;
+      float: center;
+      background-color: skyblue;
+      border: 0.25px solid #000;
+      z-index: 1;
+    }
+
+
+    .product_box img {
+      width: 100%;
+      height: 225px;
+    }
+
+    #section01>.product_box {
+      width: 20%;
+      height: 390px;
+      background-color: pink;
+      float: left;
+      overflow: visible;
+      padding: 10px;
+      display: inline-block;
+      border: 0.25px solid #999;
+    }
+
+    .product_box>p {
+      border-bottom: 1px solid #eee;
+      font-size: 12px;
+      font-weight: bold;
+      height: 25px;
+    }
+
+    .product_box>p>a {
+      color: #000;
+    }
+
+    .product_box>.c1 {
+      font-size: 12px;
+      color: #999;
+      display: block;
+    }
+
+    .product_box>.c2 {
+      font-size: 14px;
+      color: #000;
+      display: block;
+      font-weight: bold;
+    }
+
+    .icon {
+      background-color: tomato;
+      font-size: 10px;
+      color: #fff;
+      padding: 2px;
+      border-radius: 2px;
+    }
+
+    .c3 {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .btn1 {
+      border: 1px solid #ddd;
+      color: tomato;
+      padding: 1px 5px 2px;
+      font-size: 10px;
+      display: block;
+      width: 30px;
+      margin: 10px 0 0 0;
+    }
+
+    #section02 {
+      width: 1250px;
+      height: 536px;
+      margin: 0px auto;
+      float: center;
+      background-color: gray;
+      border: 0.25px solid #000;
+      z-index: 2;
+    }
+
+    #section02>#contaner2_01 {
+      width: 20%;
+      height: 390px;
+      background-color: pink;
+      float: left;
+      overflow: visible;
+      border: 0.25px solid #999;
+    }
+
+    #section02>.product_box {
+      width: 20%;
+      height: 390px;
+      background-color: pink;
+      float: left;
+      overflow: visible;
+      padding: 10px;
+      display: inline-block;
+      border: 0.25px solid #999;
+    }
+
+    #section02>#contaner2_04 {
+      width: 40%;
+      height: 390px;
+      background-color: pink;
+      float: left;
+      overflow: hidden;
+      border: 0.25px solid #999;
+    }
+
+
+    #section03 {
+      width: 1250px;
+      height: 1000px;
+      margin: 0 auto;
+      float: center;
+      background-color: skyblue;
+      border: 0.25px solid #000;
+      z-index: 3;
+    }
+
+
+    #section03>.product_box {
+      width: 20%;
+      height: 390px;
+      background-color: pink;
+      float: left;
+      overflow: visible;
+      padding: 10px;
+      display: inline-block;
+      border: 0.25px solid #999;
+    }
+
+
+    #lineBN {
+      width: 1250px;
+      height: 190px;
+      background-color: #000;
+      margin: 0 auto;
+    }
+
+    #insta_logo {
+      border: none;
+      vertical-align: top;
+      margin: 0px auto;
+      padding: 80px 0 0 0px;
+      text-align: center;
+      width: 1250px;
+      height: 150px;
+      background-color: aquamarine;
+    }
+
+    #insta {
+      width: 100%;
+      margin: 25px 0 60px 0;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    #footer {
+      width: 100%;
+      height: 460px;
+      margin: 30px auto 0px;
+      border-top: 1px solid #cccccc;
+      padding: 0;
+      background-color: #7c7c7c;
+    }
+
+    #footer>.footer_inner {
+      overflow: hidden;
+      position: relative;
+      width: 1250px;
+      height: 188px;
+      margin: 0 auto;
+      padding: 0px;
+      background-color: #86e79b;
+    }
+
+    .footer_banner {
+      overflow: hidden;
+      position: relative;
+      width: 1250px;
+      height: 136px;
+      margin: 26px auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+      background-color: #ee7575;
+    }
+
+    .footer_banner01 {
+      float: left;
+      width: 322px;
+      height: 135px;
+      padding: 0;
+      margin: 0;
+      background-color: #71e771;
+      box-sizing: border-box;
+    }
+
+    .footer_banner01>ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .footertitle {
+      font-size: 16px;
+      color: #000;
+      font-family: 'Nanum Gothic', sans-serif;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: -1px;
+      line-height: 22px;
+      list-style: none;
+    }
+
+    .footercall {
+      font-size: 30px;
+      color: #e00000;
+      font-weight: bold;
+      font-family: 'Nanum Gothic', sans-serif;
+      text-decoration: none;
+      letter-spacing: -1px;
+      line-height: 40px;
+      margin-top: 10px;
+      list-style: none;
+    }
+
+    .footerfax {
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+      font-family: 'Nanum Gothic', sans-serif;
+      text-decoration: none;
+      line-height: 16px;
+      margin-top: 5px;
+      list-style: none;
+    }
+
+    .footertime {
+      font-size: 12px;
+      color: #555;
+      font-weight: bold;
+      font-family: 'Nanum Gothic', sans-serif;
+      text-decoration: none;
+      line-height: 16px;
+      margin-top: 5px;
+      list-style: none;
+    }
+
+    .footertime {
+      font-size: 12px;
+      color: #555;
+      font-weight: bold;
+      font-family: 'Nanum Gothic', sans-serif;
+      text-decoration: none;
+      line-height: 16px;
+      margin-top: 5px;
+      list-style: none;
+    }
+
+    .footer_banner02 {
+      float: left;
+      width: 252px;
+      height: 113px;
+      padding: 0 0 0 20px;
+      background-color: #8696e7;
+      box-sizing: border-box;
+    }
+
+    .footer_banner02>.footertitle {
+      font-size: 16px;
+      color: #000;
+      font-family: 'Nanum Gothic', sans-serif;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: -1px;
+      line-height: 22px;
+    }
+
+    .footerbank {
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+      font-family: 'Nanum Gothic', sans-serif;
+      text-decoration: none;
+      line-height: 22px;
+      margin-top: 18px;
+    }
+
+    .footername {
+      font-size: 14px;
+      color: #333;
+      font-weight: bold;
+      font-family: 'Nanum Gothic', sans-serif;
+      text-decoration: none;
+      letter-spacing: -1px;
+      line-height: 16px;
+      margin-top: 10px;
+    }
+
+    .footer_banner03 {
+      float: left;
+      width: 332px;
+      height: 117px;
+      padding: 0 0 0 20px;
+      background-color: #ff7373;
+      box-sizing: border-box;
+    }
+
+    table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    #footer_board_1>td>.title {
+      width: auto;
+      font-size: 11px;
+      text-align: left;
+      padding: 0 1px 0 0px;
+      border: none;
+    }
+
+    #footer_board_1>td>.title a:hover {
+      color: #4f4f4f;
+    }
+
+
+    .footer_banner04 {
+      float: left;
+      width: 232px;
+      height: 136px;
+      padding: 0 0 0 20px;
+      background-color: #e786cf;
+      box-sizing: border-box;
+    }
+
+    .footer_bottom {
+      width: 100%;
+      background: #fffb14;
+      height: 270px
+    }
+
+    .footer_bottom>.utilmenu {
+      width: 100%;
+      height: 38px;
+      background: #6a6a6a;
+      overflow: hidden;
+      height: 38px;
+      line-height: 38px;
+      letter-spacing: -1px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .utilmenu>.inner {
+      background-color: #7c7c7c;
+      overflow: hidden;
+      position: relative;
+      width: 1250px;
+      height: 38px;
+      margin: 0 auto;
+    }
+
+    .inner {
+      background-color: #000;
+      overflow: hidden;
+      position: relative;
+      width: 1250px;
+      height: 235px;
+      margin: 0 auto;
+    }
+
+    .inner>.logo {
+      background-color: #7c7c7c;
+      float: left;
+      width: 276px;
+      height: 180px;
+      padding: 40px 0 0 0;
+      margin: 0;
+      width: 276px;
+      height: 220px;
+    }
+
+    .inner>.address {
+      background-color: #e05656;
+      float: left;
+      padding: 40px 0 0 28px;
+      color: #888;
+      font-size: 11px;
+      letter-spacing: -1px;
+      line-height: 18px;
+      height: 72px;
+      width: 580px;
+      height: 112px;
+    }
+
+    .inner>.licence {
+      width: 775px;
+      height: 24px;
+      background-color: #7c51cc;
+      display: inline-block;
+      font-size: 11px;
+      color: #b4b4b4;
+      letter-spacing: -1px;
+      margin: 15px;
+      padding: 0 5px 0 15px;
+      background: url("/web/upload/goodymall/kr/layout/goodymall_logo.gif") no-repeat;
+      background-position: 666px 4px;
+    }
+
+    .inner>.ft_banner {
+      background-color: #8696e7;
+      display: inline-block;
+      height: 70px;
+      box-sizing: border-box;
+      padding: 15px 20px 0 25px;
+      margin: 0px;
+      width: 833px;
+      height: 70px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div id="banner">
+      <span id="textinbanner">상단 띠배너</span>
+    </div>
+
+    <div id="top">
+      <div class="sbox">
+        <div class="site">
+          <a href="#">즐겨찾기</a>
+          <span>|</span>
+          <a href="#">회원가입</a>
+        </div>
+        <div class="login">
+          <a href="#">로그인</a>
+          <a href="#">회원가입</a>
+          <a href="#">마이페이지</a>
+          <a href="#">회원가입</a>
+          <a href="#">장바구니</a>
+          <a href="#">주문조회</a>
         </div>
       </div>
+    </div>
 
-      <div id="box">
-        <div class="bbox">
-          <div class="logo">
-            <a href="#">로고</a>
-          </div>
-          <div class="search">
-            <a href="#">서치</a>
-          </div>
-          <div class="sbanner">
-            <a href="#">배너</a>
-          </div>
+    <div id="box">
+      <div class="bbox">
+        <div class="logo">
+          <a href="#"><img src="http://ecudemo149780.cafe24.com/web/upload/goodymall/kr/main/logo.gif"></a>
+        </div>
+        <div class="search">
+          <fieldset>
+            <legend>검색</legend>
+          </fieldset>
+        </div>
+        <div class="sbanner">
+          <a href="#"><img src="/web/upload/goodymall/kr/main/top_Rbanner.jpg"></a>
         </div>
       </div>
+    </div>
 
-      <div id="menu">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
-      </div>
+    <div id="menu">
+      <ul>
+        <li><a href="">베스트</a></li>
+        <li><a href="">신상품</a></li>
+        <li><a href="">공지사항</a></li>
+        <li><a href="">상품후기</a></li>
+        <li><a href="">공지사항</a></li>
+        <li><a href="">상품 Q&A</a></li>
+        <li><a href="">이용 FAQ</a></li>
+        <li><a href="">게시판</a></li>
+        <li><a href="">겔러리</a></li>
+        <li><a href="">자료실</a></li>
+      </ul>
+    </div>
 
-      <div id="mainbanner">
-        <div id="Lmenu">
-          전체메뉴</div>
-        <div id="Rbanner">
-          메인배너</div>
-      </div>
 
-      <div id="sub">
-        <div id="Lbanner">
-          왼쪽배너</div>
-        <div id="product">
-          상품리스트</div>
-      </div>
+  </header>
+  <div id="mainbanner">
+    메인배너</div>
 
-      <div id="section01">
-        <h1>BEST PRODUCT</h1>
-        <p>가장 인기있는 상품입니다</p>
-        <div id="contaner01">1</div>
-        <div id="contaner02">2</div>
-        <div id="contaner03">3</div>
-        <div id="contaner04">4</div>
-        <div id="contaner05">5</div>
-        <div id="contaner06">6</div>
-        <div id="contaner07">7</div>
-        <div id="contaner08">8</div>
-        <div id="contaner09">9</div>
-        <div id="contaner10">10</div>
-      </div>
+  <div id="section01">
+    <h1>BEST PRODUCT</h1>
+    <p>가장 인기있는 상품입니다</p>
 
-      <div id="section02">
-        <h1>NEW ARRIVALS</h1>
-        <p>가장 인기있는 상품입니다</p>
-        <div id="contaner2_01">1</div>
-        <div id="contaner2_02">2</div>
-        <div id="contaner2_03">3</div>
-        <div id="contaner2_04">4</div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
 
-        <div id="section03">
-          <h1>BEST PRODUCT</h1>
-          <p>가장 인기있는 상품입니다</p>
-          <div id="contaner01">1</div>
-          <div id="contaner02">2</div>
-          <div id="contaner03">3</div>
-          <div id="contaner04">4</div>
-          <div id="contaner05">5</div>
-          <div id="contaner06">6</div>
-          <div id="contaner07">7</div>
-          <div id="contaner08">8</div>
-          <div id="contaner09">9</div>
-          <div id="contaner10">10</div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+  </div>
+
+  <div id="section02">
+    <h1>NEW ARRIVALS</h1>
+    <p>가장 인기있는 상품입니다</p>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div id="contaner2_04">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a> alt=""></a>
+    </div>
+  </div>
+
+  <div id="section03">
+    <h1>BEST PRODUCT</h1>
+    <p>가장 인기있는 상품입니다</p>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+    <div class="product_box">
+      <a href="#"><img
+          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          alt=""></a>
+      <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+      <span class="c1"><del>25,000원</del></span>
+      <span class="c2">17,800원</span>
+      <span class="icon">적</span>
+      <span class="c3">17,800원</span>
+      <span class="btn1">new</span>
+    </div>
+  </div>
+
+
+  <div id="lineBN">
+    <img src="#" alt="띠배너">
+  </div>
+
+  <div id="insta_logo">
+    <img src="/web/upload/goodymall/kr/layout/insta.gif" alt="인스타로고">
+  </div>
+  <div id="insta">
+    <iframe class="snapwidget-widget" src="https://snapwidget.com/embed/631244" allowtransparency="true" scrolling="no"
+      style="border:none; overflow:hidden; width:1125px; height:250px" frameborder="0" background-color="#666">
+    </iframe>
+  </div>
+
+  <div id="footer">
+    <div class="footer_inner">
+      <div class="footer_banner">
+        <div class="footer_banner01">
+          <ul>
+            <il class="footertitle">고객만족센터</il><br>
+            <il class="footercall">070-0000-0000</il><br>
+            <il class="footerfax">Fax : 031-000-0000</il><br>
+            <il class="footertime">메일 : goodymall2@naver.com</il><br>
+            <il class="footertime">평일 - 09:00~18:00 / 토요일 - 10:00~14:00</il>
+          </ul>
+        </div>
+        <div class="footer_banner02">
+          <ul>
+            <il class="footertitle">은행계좌 안내</il>
+            <il class="footerbank">
+              <span>국민</span>
+              67010101227987
+              <br>
+              <span>우리</span>
+              67010101227987
+              </li>
+              <li class="footername">예금주 : 굿디몰디자인
+            </il>
+          </ul>
         </div>
 
+        <div class="footer_banner03">
+          <div id="footer_board_1">
+            <h2><a href="/board/free/list.html?board_no=1">
+                <span>공지사항</span>
+              </a>
+            </h2>
+            <table summary="" border="1">
+              <tboody class="xans-element- xans-board xans-board-list-1 xans-board-list xans-board-1">
+                <tr class="xans-record-">
+                  <td class="title">
+                    <a href="/board/free/read.html?no=4&board_no=1">왼쪽고정형 템플릿으로 가장 익숙한</a>
+                  </td>
+                  <td>20230801</td>
+                </tr>
+                <tr class="xans-record-">
+                  <td class="title">
+                    <a href="/board/free/read.html?no=4&board_no=1">편리한 UI/UX 구현으로 소비자</a>
+                  </td>
+                  <td>20230801</td>
+                </tr>
+                <tr class="xans-record-">
+                  <td class="title">
+                    <a href="/board/free/read.html?no=4&board_no=1">Goodymall Design ☎</a>
+                  </td>
+                  <td>20230801</td>
+                </tr>
+              </tboody>
+            </table>
+          </div>
+        </div>
+        <div class="footer_banner04">
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <ul class="utilmenu">
+        <div class="inner">
+        </div>
+      </ul>
+      <div class="inner">
+        <h1 class="logo"><img src="http://ecudemo149780.cafe24.com/web/upload/goodymall/kr/main/logo.gif" alt="로고"></h1>
+        <p class="address">address</p>
+        <p class="licence">licence</p>
+        <div class="ft_banner">ft_banner
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 
-
-
-        </header>
-      </body>
-    </html>
+</html>
