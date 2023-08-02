@@ -2,39 +2,55 @@
 <html>
 
 <head>
-  <title>Page Title</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>pc 홈페이지</title>
   <style>
     * {
       margin: 0;
       box-sizing: border-box;
-      font-family: "맑은고딕";
+      text-decoration-line: none;
     }
 
-    a {
-      text-decoration: none;
+    input,
+    select,
+    textarea {
+      font-size: 100%;
+      font-family: "돋움", Dotum;
+      color: #353535;
+      vertical-align: middle
     }
 
     h1 {
-      margin: 60px 0px 7px 0px;
+      margin: 50px 0 0 0px;
+      color: #32343e
     }
 
     p {
-      margin: 0px 0px 10px 0px;
+      margin: 0 0 20px 0px;
+      color: #6a6a6a
     }
 
     header {
       width: 100%;
-      height: 192px;
+      height: 232px;
       margin: 0 auto;
-      border-bottom: 3px solid red;
+      border-bottom: 3px solid #efc147;
+      position: sticky;
     }
 
     #banner {
       width: 100%;
-      height: 30px;
+      height: 34px;
       float: left;
       background-color: #32343e;
       text-align: center;
+      padding: 4px 0 3px 0;
+      color: #fff;
+    }
+
+    #textinbanner {
+      font-size: 12px;
     }
 
     #top {
@@ -49,40 +65,51 @@
       width: 1250px;
       height: 30px;
       margin: 0 auto;
-      background-color: gold;
     }
 
     #top>.sbox>.site {
       width: 160px;
       height: 30px;
-      margin: 0 auto;
-      padding: 3px 0 2px 10px;
       float: left;
-      background-color: red;
-      font-size: 10px;
+      font-size: 12px;
     }
 
     #top>.sbox>.site>a:hover:not(.active) {
-      color: #aa0000;
+      color: #c48e2c;
     }
 
     #top>.sbox>.site>a {
       color: #32343e;
+      float: left;
+      margin: 7px 10px auto 0px;
     }
 
 
     #top>.sbox>.login {
       width: 400px;
       height: 30px;
-      margin: 0 auto;
       float: right;
+      font-size: 12px;
       background-color: none;
-
     }
+
+    #top>.sbox>.login>a {
+      float: right;
+      margin: 7px 0 auto 10px;
+    }
+
+    #top>.sbox>.login>a:hover:not(.active) {
+      color: #c48e2c;
+    }
+
+    #top>.sbox>.login>a {
+      color: #32343e;
+    }
+
 
     #box {
       width: 100%;
-      height: 100px;
+      height: 132px;
       float: left;
       background-color: #fff;
       border-bottom: 1px solid #ddd;
@@ -90,40 +117,64 @@
 
     #box>.bbox {
       width: 1250px;
-      height: 100px;
+      height: 132px;
       margin: 0 auto;
-      background-color: pink;
       display: inline_block
     }
 
     #box>.bbox>.logo {
       width: 300px;
-      height: 100px;
+      height: 132px;
       margin: 0 auto;
       float: left;
-      background-color: gold;
     }
 
     #box>.bbox>.search {
       width: 650px;
-      height: 100px;
+      height: 132px;
       margin: 0 auto;
       float: left;
-      background-color: skyblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    #box>.bbox>.sbanner {
-      width: 300px;
-      height: 100px;
-      margin: 0 auto;
+    .search-container {
       float: left;
-      background-color: pink;
+      width: 290px;
+      height: 35px;
     }
 
+    input[type=text] {
+      padding: 9px;
+      margin-top: 0 auto;
+      font-size: 12px;
+      border: none;
+      width: 257px;
+    }
+
+    .search-container button {
+      float: right;
+      padding: 10px 10px;
+      margin-top: 0 auto;
+      margin-right: 0px;
+      background: #efc147;;
+      font-size: 13px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-container button:hover {
+      background: #efc147;
+    }
+
+    input[type=text] {
+      border: 2px solid #efc147;
+    }
 
     #menu {
       width: 100%;
-      height: 30px;
+      height: 35px;
       float: left;
     }
 
@@ -136,18 +187,19 @@
 
     #menu>ul>li {
       float: left;
+      font-size: 14px;
     }
 
     #menu>ul>li>a {
       display: block;
-      color: #666;
+      color: #777;
       text-align: center;
-      padding: 5px 7px 5px 50px;
+      padding: 7px 7px 7px 54px;
       text-decoration: none;
     }
 
     #menu>ul>li a:hover:not(.active) {
-      color: #aa0000;
+      color: #c48e2c;
     }
 
 
@@ -156,7 +208,6 @@
       height: 450px;
       margin: 0 auto;
       float: center;
-      background-color: gray;
       position: relative;
     }
 
@@ -188,8 +239,6 @@
       height: 925px;
       margin: 0px auto;
       float: center;
-      background-color: skyblue;
-      border: 0.25px solid #000;
       z-index: 1;
     }
 
@@ -199,15 +248,15 @@
       height: 225px;
     }
 
+
     #section01>.product_box {
       width: 20%;
       height: 390px;
-      background-color: pink;
       float: left;
       overflow: visible;
       padding: 10px;
       display: inline-block;
-      border: 0.25px solid #999;
+      border: 1px solid #f2f2f2;
     }
 
     .product_box>p {
@@ -219,6 +268,7 @@
 
     .product_box>p>a {
       color: #000;
+      font-size: 14px;
     }
 
     .product_box>.c1 {
@@ -244,7 +294,7 @@
 
     .c3 {
       font-size: 12px;
-      color: #666;
+      color: #777;
     }
 
     .btn1 {
@@ -262,38 +312,33 @@
       height: 536px;
       margin: 0px auto;
       float: center;
-      background-color: gray;
-      border: 0.25px solid #000;
       z-index: 2;
     }
 
     #section02>#contaner2_01 {
       width: 20%;
       height: 390px;
-      background-color: pink;
       float: left;
       overflow: visible;
-      border: 0.25px solid #999;
+      border: 1px solid #f2f2f2;
     }
 
     #section02>.product_box {
       width: 20%;
       height: 390px;
-      background-color: pink;
       float: left;
       overflow: visible;
       padding: 10px;
       display: inline-block;
-      border: 0.25px solid #999;
+      border: 1px solid #f2f2f2;
     }
 
     #section02>#contaner2_04 {
       width: 40%;
       height: 390px;
-      background-color: pink;
       float: left;
       overflow: hidden;
-      border: 0.25px solid #999;
+      border: 1px solid #f2f2f2;
     }
 
 
@@ -302,8 +347,6 @@
       height: 1000px;
       margin: 0 auto;
       float: center;
-      background-color: skyblue;
-      border: 0.25px solid #000;
       z-index: 3;
     }
 
@@ -311,12 +354,11 @@
     #section03>.product_box {
       width: 20%;
       height: 390px;
-      background-color: pink;
       float: left;
       overflow: visible;
       padding: 10px;
       display: inline-block;
-      border: 0.25px solid #999;
+      border: 1px solid #f2f2f2;
     }
 
 
@@ -335,7 +377,6 @@
       text-align: center;
       width: 1250px;
       height: 150px;
-      background-color: aquamarine;
     }
 
     #insta {
@@ -455,6 +496,8 @@
       box-sizing: border-box;
     }
 
+
+
     .footer_banner02>.footertitle {
       font-size: 16px;
       color: #000;
@@ -492,7 +535,22 @@
       height: 117px;
       padding: 0 0 0 20px;
       background-color: #ff7373;
-      box-sizing: border-box;
+    }
+
+    #footer_board_1 {
+      position: relative;
+      float: left;
+      width: 280px;
+    }
+
+    #footer_board_1>h2 {
+      font-size: 16px;
+      color: #000;
+      font-family: 'Nanum Gothic', sans-serif;
+      letter-spacing: -1px;
+      line-height: 22px;
+      margin-bottom: 10px;
+      text-decoration: none;
     }
 
     table {
@@ -502,17 +560,32 @@
       border-collapse: collapse;
     }
 
+    #footer_board_1>td {
+      width: 60px;
+      padding: 0 1px 0 0;
+      border: none;
+      border-bottom: 1px dotted #d8d8d8;
+      font-size: 10px;
+      color: #a4a4a4;
+      text-align: right;
+      line-height: 25px;
+      font-family: 'Malgun Gothic', sans-serif;
+    }
+
     #footer_board_1>td>.title {
       width: auto;
       font-size: 11px;
       text-align: left;
-      padding: 0 1px 0 0px;
-      border: none;
+    }
+
+    #footer_board_1>td>.title>a {
+      color: #4f4f4f
     }
 
     #footer_board_1>td>.title a:hover {
       color: #4f4f4f;
     }
+
 
 
     .footer_banner04 {
@@ -616,14 +689,13 @@
 
   <header>
     <div id="banner">
-      <span id="textinbanner">상단 띠배너</span>
+      <span id="textinbanner">오늘 가입하면 20% 할인쿠폰 지급</span>
     </div>
 
     <div id="top">
       <div class="sbox">
         <div class="site">
           <a href="#">즐겨찾기</a>
-          <span>|</span>
           <a href="#">회원가입</a>
         </div>
         <div class="login">
@@ -643,12 +715,17 @@
           <a href="#"><img src="http://ecudemo149780.cafe24.com/web/upload/goodymall/kr/main/logo.gif"></a>
         </div>
         <div class="search">
-          <fieldset>
-            <legend>검색</legend>
-          </fieldset>
+          <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
         </div>
+
+
         <div class="sbanner">
-          <a href="#"><img src="/web/upload/goodymall/kr/main/top_Rbanner.jpg"></a>
+          <a href="#"><img src="http://ecudemo149780.cafe24.com/web/upload/goodymall/kr/main/top_Rbanner.jpg"></a>
         </div>
       </div>
     </div>
@@ -670,8 +747,10 @@
 
 
   </header>
+
   <div id="mainbanner">
-    메인배너</div>
+    <img src="img/mainBN.png" alt="BN">
+  </div>
 
   <div id="section01">
     <h1>BEST PRODUCT</h1>
@@ -679,7 +758,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/95bf9bca5d037316b3316fadd56d2f94.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -691,7 +770,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/1f06f77d98f02fdf801cdbec046603c8.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -703,7 +782,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/1fc16df7e2757142a8f861c96683ff38.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -715,7 +794,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/3fd55daf51dd96077a82019aa10ca68b.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -727,7 +806,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/95423322da82e03eda4640871913e6c9.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -739,7 +818,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/6f57ece3edbf4c691f3b67b027d00e6a.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -751,7 +830,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/eb8c4c36a3ca7dc7e312516ea7ac0b59.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -763,7 +842,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/1f06f77d98f02fdf801cdbec046603c8.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -775,7 +854,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/95423322da82e03eda4640871913e6c9.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -787,7 +866,7 @@
 
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/eb8c4c36a3ca7dc7e312516ea7ac0b59.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -803,7 +882,7 @@
     <p>가장 인기있는 상품입니다</p>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/95423322da82e03eda4640871913e6c9.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -814,7 +893,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/d25b3264fffec964df04a89153e3dc19.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -825,7 +904,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/3fd55daf51dd96077a82019aa10ca68b.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -835,9 +914,8 @@
       <span class="btn1">new</span>
     </div>
     <div id="contaner2_04">
-      <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
-          alt=""></a> alt=""></a>
+      <a href="#"><img src="http://ecudemo149780.cafe24.com/web/upload/goodymall/kr/main/main_listmain2.jpg" alt=""></a>
+      alt=""></a>
     </div>
   </div>
 
@@ -846,7 +924,7 @@
     <p>가장 인기있는 상품입니다</p>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/95423322da82e03eda4640871913e6c9.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -857,7 +935,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/eb8c4c36a3ca7dc7e312516ea7ac0b59.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -868,7 +946,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/95bf9bca5d037316b3316fadd56d2f94.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -879,7 +957,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/d25b3264fffec964df04a89153e3dc19.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -890,7 +968,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/3fd55daf51dd96077a82019aa10ca68b.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -901,7 +979,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/aee5aeeb7d18a42c4f09a9628ad6d058.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -912,7 +990,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/95bf9bca5d037316b3316fadd56d2f94.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -923,7 +1001,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/1f06f77d98f02fdf801cdbec046603c8.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -934,7 +1012,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/95423322da82e03eda4640871913e6c9.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -945,7 +1023,7 @@
     </div>
     <div class="product_box">
       <a href="#"><img
-          src="https://images.unsplash.com/photo-1545408074-076d7582081e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+          src="http://ecudemo149780.cafe24.com/web/product/medium/20200324/6f57ece3edbf4c691f3b67b027d00e6a.jpg"
           alt=""></a>
       <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
       <span class="c1"><del>25,000원</del></span>
@@ -958,11 +1036,11 @@
 
 
   <div id="lineBN">
-    <img src="#" alt="띠배너">
+    <img src="http://ecudemo149780.cafe24.com/web/upload/goodymall/kr/main/main_banner02.jpg" alt="띠배너">
   </div>
 
   <div id="insta_logo">
-    <img src="/web/upload/goodymall/kr/layout/insta.gif" alt="인스타로고">
+    <img src="http://ecudemo149780.cafe24.com/web/upload/goodymall/kr/layout/insta.gif" alt="인스타로고">
   </div>
   <div id="insta">
     <iframe class="snapwidget-widget" src="https://snapwidget.com/embed/631244" allowtransparency="true" scrolling="no"
@@ -998,7 +1076,8 @@
         </div>
 
         <div class="footer_banner03">
-          <div id="footer_board_1">
+          <div id="footer_board_1"
+            class="xans-element- xans-board xans-board-listpackage-1 xans-board-listpackage xans-board-1">
             <h2><a href="/board/free/list.html?board_no=1">
                 <span>공지사항</span>
               </a>
@@ -1028,6 +1107,12 @@
           </div>
         </div>
         <div class="footer_banner04">
+          <ul>
+            <li><a href="#">Q&A<span>상품문의</span></a></li>
+            <li><a class="dark" href="#">REVIEW<span>구매후기</span></a></li>
+            <li><a class="dark" href="#">NOTICE<span>공지사항</span></a></li>
+            <li><a href="#">EVENT<span>이벤트</span></a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1037,7 +1122,8 @@
         </div>
       </ul>
       <div class="inner">
-        <h1 class="logo"><img src="http://ecudemo149780.cafe24.com/web/upload/goodymall/kr/main/logo.gif" alt="로고"></h1>
+        <div class="logo"><img src="http://ecudemo149780.cafe24.com/web/upload/goodymall/kr/main/logo_footer.gif"
+            alt="로고"></div>
         <p class="address">address</p>
         <p class="licence">licence</p>
         <div class="ft_banner">ft_banner
